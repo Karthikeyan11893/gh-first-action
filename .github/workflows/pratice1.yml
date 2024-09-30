@@ -5,25 +5,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
       - name: Lint
         run: npm run lint
+
   test:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
       - name: Test code
         run: npm run test
-  test:
+
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
       - name: Install dependencies
         run: npm install
       - name: Build code
